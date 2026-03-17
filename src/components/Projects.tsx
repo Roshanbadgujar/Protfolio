@@ -2,10 +2,20 @@ import React, { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { ExternalLink, Github, Database, Cpu, Globe, ArrowRight, Code2 } from 'lucide-react';
 
+interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  icon: React.ReactElement<{ size?: number; className?: string }>;
+  image: string;
+  color: string;
+  github: string;
+  link: string;
+}
+
 interface ProjectCardProps {
-  project: any;
+  project: Project;
   index: number;
-  key?: any;
 }
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
@@ -68,7 +78,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
              <div className="relative group/icon">
                <div className="absolute inset-0 bg-brand-accent/10 blur-[100px] rounded-full scale-150 group-hover:scale-200 transition-transform duration-700" />
                <div className="relative z-10 text-white/10 group-hover:text-brand-accent group-hover:scale-110 transition-all duration-700">
-                 {React.cloneElement(project.icon as React.ReactElement, { size: 100 })}
+                 {React.cloneElement(project.icon, { size: 100 })}
                </div>
              </div>
           </div>
@@ -119,7 +129,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 };
 
 export const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Kanchana AI",
       description: "A sophisticated AI-driven assistant designed for complex task automation and natural language processing, leveraging advanced LLM integration.",

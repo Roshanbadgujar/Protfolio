@@ -225,7 +225,7 @@ export const ChatGuide = () => {
                   className="w-full bg-black/40 border border-white/10 rounded-xl pl-5 pr-14 py-4 text-xs font-mono text-white/90 placeholder:text-white/20 focus:outline-none focus:border-brand-accent/50 focus:shadow-[0_0_20px_rgba(0,229,168,0.05)] transition-all disabled:opacity-50"
                 />
                 <button
-                  onClick={handleSend}
+                  onClick={() => handleSend()}
                   disabled={!hasPermission || isLoading || !input.trim()}
                   className="absolute right-2 top-1/2 -translate-y-1/2 p-3 text-brand-accent hover:bg-brand-accent/10 rounded-lg transition-all disabled:opacity-50 interactive"
                 >
