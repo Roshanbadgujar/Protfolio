@@ -75,11 +75,11 @@ export const Contact = () => {
               transition={{ delay: 0.1 }}
               className="text-6xl md:text-7xl font-bold tracking-tighter mb-10 font-display leading-[0.9]"
             >
-              Let's build <br />
+              Let&apos;s build <br />
               <span className="text-white/5 italic">something great.</span>
             </motion.h3>
             <p className="text-brand-muted text-xl mb-12 leading-relaxed max-w-lg">
-              I'm currently looking for new opportunities to contribute to high-impact engineering teams. My inbox is always open.
+              I&apos;m currently looking for new opportunities to contribute to high-impact engineering teams. My inbox is always open.
             </p>
 
             <div className="space-y-8">

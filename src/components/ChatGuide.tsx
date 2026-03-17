@@ -113,7 +113,7 @@ export const ChatGuide = () => {
         text: welcomeText
       }]);
     }
-  }, [isOpen]);
+  }, [isOpen, messages.length]);
 
   return (
     <div className="fixed bottom-6 right-6 z-[100]">

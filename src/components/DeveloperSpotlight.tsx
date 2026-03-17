@@ -46,7 +46,7 @@ export const DeveloperSpotlight = () => {
               >
                 <Quote className="absolute -top-8 -left-8 text-white/5 w-24 h-24 -z-10" />
                 <p className="text-2xl md:text-3xl text-brand-muted leading-relaxed font-light italic">
-                  "I believe that great software isn't just about solving problems—it's about creating experiences that feel seamless, intelligent, and human."
+                  &quot;I believe that great software isn&apos;t just about solving problems—it&apos;s about creating experiences that feel seamless, intelligent, and human.&quot;
                 </p>
               </motion.div>
             </div>

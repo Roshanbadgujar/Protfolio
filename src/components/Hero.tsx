@@ -2,29 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Github, Terminal, Cpu, Server, Database, Code2 } from 'lucide-react';
 
+const BACKEND_TERMINAL_LINES = [
+  { text: "roshan@backend:~$ npm start", color: "text-white/40" },
+  { text: "> initializing server...", color: "text-brand-accent" },
+  { text: "> connecting to mongodb...", color: "text-brand-accent" },
+  { text: "> database connected successfully", color: "text-emerald-400" },
+  { text: "> express server running on port 3000", color: "text-emerald-400" },
+  { text: "> ai model loaded: gemini-pro", color: "text-brand-accent-secondary" },
+  { text: "> system ready for requests", color: "text-white/60" },
+];
+
 const BackendTerminal = () => {
-  const lines = [
-    { text: "roshan@backend:~$ npm start", color: "text-white/40" },
-    { text: "> initializing server...", color: "text-brand-accent" },
-    { text: "> connecting to mongodb...", color: "text-brand-accent" },
-    { text: "> database connected successfully", color: "text-emerald-400" },
-    { text: "> express server running on port 3000", color: "text-emerald-400" },
-    { text: "> ai model loaded: gemini-pro", color: "text-brand-accent-secondary" },
-    { text: "> system ready for requests", color: "text-white/60" },
-  ];
 
   const [visibleLines, setVisibleLines] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setVisibleLines(prev => (prev < lines.length ? prev + 1 : prev));
+      setVisibleLines(prev => (prev < BACKEND_TERMINAL_LINES.length ? prev + 1 : prev));
     }, 800);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="font-mono text-[11px] sm:text-xs leading-relaxed space-y-2">
-      {lines.slice(0, visibleLines).map((line, i) => (
+      {BACKEND_TERMINAL_LINES.slice(0, visibleLines).map((line, i) => (
         <motion.div
           key={i}
           initial={{ opacity: 0, x: -10 }}
@@ -34,7 +35,7 @@ const BackendTerminal = () => {
           {line.text}
         </motion.div>
       ))}
-      {visibleLines >= lines.length && (
+      {visibleLines >= BACKEND_TERMINAL_LINES.length && (
         <motion.div
           animate={{ opacity: [0, 1] }}
           transition={{ repeat: Infinity, duration: 0.8 }}
@@ -135,7 +136,7 @@ export const Hero = () => {
                 transition={{ duration: 1, delay: 0.5 }}
                 className="text-xl md:text-2xl text-brand-muted max-w-xl leading-relaxed"
               >
-                I'm <span className="text-white font-semibold">Roshan Badgujar</span>, a B.Tech student at <span className="text-brand-accent">SDBCE Indore</span>, specializing in building scalable backend systems and leading hackathon teams.
+                I&apos;m <span className="text-white font-semibold">Roshan Badgujar</span>, a B.Tech student at <span className="text-brand-accent">SDBCE Indore</span>, specializing in building scalable backend systems and leading hackathon teams.
               </motion.p>
             </div>
 

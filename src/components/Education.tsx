@@ -126,7 +126,7 @@ export const Education = () => {
             <div className="mt-16 p-10 rounded-[2.5rem] bg-brand-accent/[0.03] border border-brand-accent/10 relative group/focus overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/5 to-transparent opacity-0 group-hover/focus:opacity-100 transition-opacity duration-500" />
               <h4 className="text-[10px] font-mono font-bold text-brand-accent uppercase tracking-[0.3em] mb-4 relative z-10">Continuous Learning</h4>
-              <p className="text-base text-brand-muted italic leading-relaxed relative z-10">"I spend at least 10 hours a week learning new technologies and contributing to open source."</p>
+              <p className="text-base text-brand-muted italic leading-relaxed relative z-10">&quot;I spend at least 10 hours a week learning new technologies and contributing to open source.&quot;</p>
             </div>
           </div>
 

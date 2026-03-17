@@ -175,7 +175,7 @@ export const Profile = () => {
                 <div className="p-8 rounded-[2rem] bg-brand-accent/[0.03] border border-brand-accent/10 relative group/focus overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/5 to-transparent opacity-0 group-hover/focus:opacity-100 transition-opacity duration-500" />
                   <p className="text-[10px] font-mono font-bold text-brand-accent uppercase tracking-[0.3em] mb-4 relative z-10">Current Focus</p>
-                  <p className="text-base text-brand-muted italic leading-relaxed relative z-10">"Architecting autonomous AI agents with long-term memory."</p>
+                  <p className="text-base text-brand-muted italic leading-relaxed relative z-10">&quot;Architecting autonomous AI agents with long-term memory.&quot;</p>
                 </div>
               </div>
             </div>
